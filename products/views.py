@@ -11,6 +11,12 @@ NOTE: Conside this as a reference and follow this same coding structure or forma
 '''
 
 # Create your views here.
+
+def home(request):
+    items = Item.objects.all() #Fetch all items
+    return render(request, 'home.html', {'items': items})
+
+
 class ItemView(APIView):
 
     def get(self, request):
