@@ -17,13 +17,12 @@ def home(request):
     return render(request, 'home.html', {'items': items})
 
 def menu_items_view(request):
-
     menu_items = [
         {"name": "Pizza", "price": 240},
         {"name": "Burger", "price": 120},
         {"name": "Pasta", "price": 140},
     ]
-
+    
     return render(request, "menu_item.html", {'menu_items': menu_items})
 
 
